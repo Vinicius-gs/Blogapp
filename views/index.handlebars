@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem vindo ao Blogapp Nodejs</h1>
+  <p class="lead">Desenvolvendo uma aplicação utilizando Node.js + MongoDB + Bootstrap + Express</p>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="#" role="button">Criar Cadastro</a>
+</div>
+<hr>
+
+<h2>Postagens recentes: </h2>
+
+{{#each postagem}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{titulo}}</h4>
+            <p>{{conteudo}}</p>
+            <a href="/postagem/{{slug}}"><button class="btn btn-success">Saiba mais</button></a>
+            <hr>
+            <small>Categoria: {{categoria.nome}}</small><br>
+            <small>Data de publicação:{{data}}</small>
+        </div>
+    </div>
+{{else}}
+    <h4>Nenhuma postagem registrada</h4>
+{{/each}}

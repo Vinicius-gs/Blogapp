@@ -1,0 +1,9 @@
+<h4>Lista de Categorias:</h4>
+<hr>
+{{#each categoria}}
+
+<a href="/categoria/{{slug}}" class="list-group-item list-group-item-action list-group-item-secondary mt-2">{{nome}}</a>
+
+{{else}}
+ <h3>Não há categoria registrada</h3>
+{{/each}}
